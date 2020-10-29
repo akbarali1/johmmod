@@ -1,6 +1,7 @@
 # Common ignores
 /.idea
 /.vscode
+/aaaa
 /composer.lock
 /config/autoload/*.local.php
 /config/*.local.php

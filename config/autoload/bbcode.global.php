@@ -15,7 +15,7 @@ return [
         //image || Rasm
         'img'       => [
             'from' => '#\[img](.+?)\[/img]#is',
-            'to'   => '<img class="" src="$1" alt="*">',
+            'to'   => '<img class="" src="../upload/images_akb/$1" alt="*" style=" max-width: 100%; ">',
             'data' => '$1',
         ],
         // Жирный

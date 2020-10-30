@@ -1,43 +1,31 @@
 <?php
-declare(strict_types=1);
-
-use Johncms\System\Http\Environment;
+declare(strict_types = 1);
+use Johncms\FileInfo;
 use Johncms\System\Http\Request;
-use Johncms\Users\User;
-use Johncms\Validator\Validator;
 $db = di(PDO::class);
 $request = di(Request::class);
-
-$post = $request->getPost('name', '', FILTER_SANITIZE_STRING);
-
-if ($request->getMethod() === 'POST') {
-    $connect = Illuminate\Database\Capsule\Manager::connection();
-    $id = $connect->table('images_akb')->insertGetId(
-        [
-            'name' => $post,
-            'time' => time(),
-            'uploader_id' => 'id',
-        ]
-    );
-    echo $id;
-    exit();
+$connect = Illuminate\Database\Capsule\Manager::connection();
+$user = di(Johncms\Users\User::class);
+//$post = $request->getPost('name', '', FILTER_SANITIZE_STRING);
+$id = $connect->table('images_akb')->insertGetId(['name' => $user->name, 'time' => time(), 'uploader_id' => $user->id, ]);
+//echo $id;
+$files = $request->getUploadedFiles();
+$file = $files['input_file_name'];
+$file_info = new FileInfo($file->getClientFilename());
+require_once ('core_akb.php');
+$jsonencode = new Json_Akb();
+if ($file_info->isImage()) {
+    $filename = $id . '.png';
+    $file->moveTo(UPLOAD_PATH . 'images_akb/' .$filename );
+    if (!$file->isMoved()) {
+        echo $jsonencode->jeerror('Не удалось скачать файл');
+    } else {
+        echo $jsonencode->jesuccess_akb($id, $filename);
+    }
+} else {
+    echo $jsonencode->jeerror('Разрешены только фото');
+    // echo 'Разрешены только фото';
+    
 }
-
-
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="?" method="post">
-    <input type="name" name="name">
-    <input type="submit" value="submit">
-    </form>
-</body>
-</html>
+exit();
+//}

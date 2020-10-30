@@ -13,3 +13,28 @@ $view->addFolder('images', __DIR__ . '/templates/');
 
 // Добавляем ссылку Контакты в хлебные крошки
 $nav_chain->add('Images', '/images/');
+
+// Собираем массив данных, который будет передан в шаблон
+$data = [
+    'title'      => 'Images',
+    'page_title' => 'Images Upload',
+];
+
+// Дополним массив $data нашими контактными данными, которые выведем дальше в шаблоне
+$data['images'] = [
+    [
+        'name'  => 'E-mail', // Название контакта
+        'value' => 'admin@example.com', // Значение, которое будет отображаться
+    ],
+    [
+        'name'  => 'Номер телефона',
+        'value' => '+7 (999) 121-12-21',
+    ],
+    [
+        'name'  => 'Telegram',
+        'value' => '@johncms_official',
+    ],
+];
+
+// Подключаем шаблон index.phtml и передаем в него собранные выше данные
+echo $view->render('images::index', ['data' => $data]);

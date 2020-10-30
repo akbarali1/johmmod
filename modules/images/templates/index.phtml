@@ -1,0 +1,16 @@
+<?php
+$this->layout(
+    'system::layout/default',[
+        'title'      => $data['title'], // Передаем заголовок страницы в тег title
+        'page_title' => $data['page_title'], // Передаем заголовок страницы в тег h1
+    ]
+);
+?>
+<div>Вы можете связаться с нами по любому из нижеперечисленных контактов:</div>
+
+<ul>
+    <!-- Тут мы перебираем наш массив контактов и выводим название контакта и значение, разделяя их двоеточием -->
+    <?php foreach ($data['images'] as $images): ?>
+        <li><?= $images['name'] ?>: <b><?= $images['value'] ?></b></li>
+    <?php endforeach; ?>
+</ul>

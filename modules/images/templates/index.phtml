@@ -30,6 +30,15 @@
   </div>
 </form>
 <hr>
+<textarea ></textarea> 
+<div contenteditable style="width: 100px;height: 100px; border:1px solid"> 
+</div> 
+<script> 
+document.addEventListener('paste', function (event) { 
+  console.log(event) 
+})
+</script>
+<hr>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3" id="boshi">
   <?php foreach ($data['rasm'] as $photo): ?>
   <div class="col mb-4">
@@ -47,6 +56,8 @@
   </div>
   <?php endforeach; ?>
 </div>
+<hr>
+<?= $data['pagination'] ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Progress bar -->
 <script>

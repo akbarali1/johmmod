@@ -28,22 +28,23 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "laravel-mix": "^5.0.5",
+    "laravel-mix": "^5.0.0",
     "resolve-url-loader": "^3.1.1",
-    "sass": "^1.26.11",
+    "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
-    "axios": "^0.20.0",
-    "bootstrap": "^4.5.2",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
     "cross-env": "^6.0.3",
-    "jquery": "^3.5.1",
+    "embed-js": "^5.0.4",
+    "embed-preset-basic": "^5.0.4",
+    "jquery": "^3.4.0",
     "laravel-vue-pagination": "^2.3.1",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.15",
     "popper.js": "^1.15.0",
-    "sticky-sidebar": "^3.3.1",
-    "swiper": "^5.4.5",
-    "vue": "^2.6.12"
+    "swiper": "^5.2.1",
+    "vue": "^2.6.11"
   }
 }

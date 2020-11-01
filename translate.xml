@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<scanRuleset>
+    <description>JohnCMS ruleset for PHP code scanner for gettext</description>
+    <!-- Blog module -->
+    <domain>
+        <name>blog</name>
+        <target>modules/blog/locale</target>
+        <sourceDir>modules/blog/lib</sourceDir>
+        <sourceDir>modules/blog/templates</sourceDir>
+        <sourceFile>modules/blog/admin.php</sourceFile>
+        <sourceFile>modules/blog/index.php</sourceFile>
+        <sourceFile>modules/blog/install.php</sourceFile>
+    </domain>
+</scanRuleset>

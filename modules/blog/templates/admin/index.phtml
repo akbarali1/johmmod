@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @var $title
+ * @var $page_title
+ * @var $data
+ */
+
+$this->layout('system::layout/default');
+?>
+
+<div class="mobile_tiles">
+    <div class="row">
+        <div class="col-6 col-sm-4 col-md-4 col-lg-3 mt-3 tile">
+            <a href="/blog/admin/content/" class="card border-0 shadow text-center border-radius-12 h-100">
+                <div class="card-body">
+                    <div class="mt-2 tile_name"><?= __('Content management') ?></div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-4 col-lg-3 mt-3 tile">
+            <a href="/blog/admin/settings/" class="card border-0 shadow text-center border-radius-12 h-100">
+                <div class="card-body">
+                    <div class="mt-2 tile_name"><?= __('Blog settings') ?></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+

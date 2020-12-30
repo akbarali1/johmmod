@@ -35,10 +35,10 @@ if ($user->isValid()) {
     exit();
 }
 
-$req = $connection->table('images_akb')->orderByDesc('time')->paginate(12);
+$req = $connection->table('images_akb')->orderByDesc('time')->paginate(9);
 $massiv = [];
 foreach ($req as $item) {
-    $massiv[] = ['name' => $item->name, 'id' => $item->id];
+    $massiv[] = ['name' => $item->name, 'id' => $item->id, 'uploader_id' => $item->uploader_id];
 }
 
 // Собираем массив данных, который будет передан в шаблон

@@ -1,0 +1,61 @@
+<?php
+$this->layout(
+    'system::layout/default',
+    [
+        'title'      => $title,
+        'page_title' => $page_title ?? $title,
+    ]
+);
+?>
+<form name="form" action="?" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="summ"><?= __('site name') ?></label>
+            <input type="text" name="site" class="form-control"placeholder="<?= __('site name') ?>" required autofocus>
+        </div>
+
+        <div class="form-group">
+            <label for="summ"><?= __('site link') ?></label>
+            <input type="text" name="link" class="form-control"placeholder="<?= __('site link') ?>" required>
+        </div>
+
+        <div class="form-group">
+            <label for="summ"><?= __('video') ?></label>
+            <input type="text" name="video" class="form-control"placeholder="<?= __('video') ?>">
+        </div>
+
+        <div class="form-group">
+            <label for="name"><?= __('description') ?></label>
+            <input type="text" name="description" class="form-control" placeholder="<?= __('description') ?>">
+        </div>
+
+        <div class="form-group">
+            <label for="inputState"><?= __('ads type') ?></label>
+            <select class="form-control" name="type">
+            <option selected=""><?= __('select') ?></option>
+              <option value="1">Link</option>
+              <option value="2">Video</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="inputState"><?= __('ads time') ?></label>
+            <select class="form-control" name="ads_time">
+            <option selected=""><?= __('select') ?></option>
+              <option value="20">20 <?= __('second') ?></option>
+              <option value="60">60 <?= __('second') ?></option>
+              <option value="100">100 <?= __('second') ?></option>
+              <option value="140">140 <?= __('second') ?></option>
+              <option value="180">180 <?= __('second') ?></option>
+              <option value="220">220 <?= __('second') ?></option>
+              
+            </select>
+         </div>
+
+         <div class="mt-3">
+            <input type="submit" name="submit" value="<?= __('save') ?>" class="btn btn-primary">
+            <a href="/test/" class="btn btn-secondary"><?= __('Cancel') ?></a>
+        </div>
+
+
+    </form>
+    

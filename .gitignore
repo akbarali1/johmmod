@@ -3,8 +3,9 @@
 /.vscode
 /aaaa
 /composer.lock
-/config/autoload/*.local.php
-/config/*.local.php
+/config/autoload/database.local.php
+/config/autoload/system.local.php
+
 
 # Data folder ignores
 /data/cache/*

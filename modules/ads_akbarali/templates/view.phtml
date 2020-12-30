@@ -1,0 +1,105 @@
+<?
+d($data);
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Akbarali">
+    <title id="time_title"><?=$data['ads']->time_ads?></title>
+    <script type="text/javascript" src="<?=$config['homeurl']?>/ads_akbarali/jquery.js"></script>
+    <link rel="stylesheet" href="<?=$config['homeurl']?>/ads_akbarali/surfing.css" type="text/css">
+  </head>
+  <body id="click">
+   <script>
+      function viewing_surfing(code){
+      	var code = $.trim(code);
+      	var v_mail_c = '7825508F20A464C4B69AE14934DC011C';
+      	$.ajax({
+      		type: 'POST', url: '/ajax/ajax_mails_pay.php',  
+      		data: { 'sf' : 'viewing_mail', 'code' : code, 'v_mail_c' : v_mail_c }, 
+      		success: function(data) { $('#echo_all').html(data); }
+      	});
+      }
+      
+      var w = window, d=document, active = 1, lactive=1;
+      var isa = 1;
+      $(w).focus(function(){active=1}).blur(function(){active=0});
+      
+      function timer(){
+      	lactive=((typeof d.hasFocus != 'undefined' ? d.hasFocus() : active) ? 1 : 0);
+      	
+      	var obj   = document.getElementById('time');
+      	var obj_t = document.getElementById('time_title');
+      
+      	if(isa&&lactive||!isa){
+      		obj.innerHTML--;
+      		obj_t.innerHTML--;
+      		$('#echo_all').html('');
+			
+      	} else if(isa&&!lactive){
+      		$('#echo_all').html('<span style="color:#e32636;">Окно неактивно</span>');
+			$('#time_title').html('Окно неактивно');
+      	}
+      
+      	if(obj.innerHTML == 0){
+      		var v_surfing_lc = '005DFBCB06AE188C190141A6C0C2961F';
+      		$('#echo_all').html('<span style="color:blue;">Reklamani ko`rib bo`ldim</span> <button>Button</button>');
+			$.ajax({
+      			type: 'POST', 
+				url: '/ajax/ajax_surfing2.php',  
+      			data: { 'sf' : 'load_captcha_sf', 'v_surfing_lc' : v_surfing_lc, 'id_rek' : '' }, 
+      			beforeSend: function(){ $('#timer_lo').remove(); $('#code').css({display: 'block'}); },
+      			success: function(data){ $('#code').html(data); }
+      		});
+      		setTimeout(function(){},1000);
+      
+      	}else{ setTimeout(timer,1000); }
+      
+      }
+      setTimeout(timer,1000);	
+      
+    </script>
+    <table class="table_gl" style="position: absolute; bottom: 0px;">
+      <tbody>
+        <tr>
+          <td style="width: 30%; padding-left: 20px; " rowspan="2"><span class="echo_sr" id="echo_all"></span></td>
+          <td style="width: 30%; padding-left: 10px;" rowspan="2">
+            <div id="timer_lo">
+              <div class="timer notranslate"><span id="time"><?=$data['ads']->time_ads?></span></div>
+            </div>
+            <div id="code" style="display: none;"></div>
+            <div id="timer_lo_error"></div>
+          </td>
+          <td style="width: 40%;" rowspan="2">
+            <script>
+              function start_contextual(id, url, no_http){
+              	var win = window.open("http://seo-fast.ru/class/no_referer.php?go_url="+url+"&no_http="+no_http);
+              	if(win){
+              		$.ajax({ 
+              			type: "POST", 
+              						url: "http://add2.seo-fast.ru/ajax/ajax_rest.php", 
+              						data: { 'sf' : 'viewing_contextual', 'id' : id }, 
+              			success: function(data){
+              				$("#title_contextual"+id).css("color", "#4b177a");
+              				//if(data == '1'){ close(); }else{ $('#start_transitions').html(data); }
+              			}
+              		});
+              	}else{
+              		$('#start_transitions').html(er_s+"Разблокируйте всплывающие окна для сайта seo-fast.ru в своё браузере."+span);
+              	}
+              	return true;
+              }
+            </script>
+            <center>
+              <a href="https://socpublic.com/?i=3397782&slide=1" target="_blank" title="Socpublic">
+                <div style="background: url(http://socpublic.com/storage/banners/banner_7_468x60.gif); width: 468px; height: 60px; margin-top: 20px; margin-bottom: 20px;"></div>
+              </a>
+            </center>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--<a onClick="viewing_surfing('2fa51cf77fe057312870c05c00d36147', 'surf');" class='button_s'>Пройти проверку</a>-->
+     </body>
+</html>

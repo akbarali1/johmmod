@@ -1,0 +1,30 @@
+<?php
+
+// Подключаем основной шаблон сайта
+$this->layout(
+    'system::layout/default',
+    [
+        'title'      => $data['title'], // Передаем заголовок страницы в тег title
+        'page_title' => $data['page_title'] ?? $data['title'], // Передаем заголовок страницы в тег h1
+    ]
+);
+
+        //d($data['ads']);
+
+echo $data['pagination'];?>
+<ul>
+    <!-- Тут мы перебираем наш массив контактов и выводим название контакта и значение, разделяя их двоеточием -->
+    <?php foreach ($data['ads'] as $ads): ?>
+
+        <div class="new_post-item without_avatar">
+            <a href="<?=$config['homeurl']?>/ads_akbarali/view/?id=<?= $ads['id']?>" class="post-title"><?= $ads['name']?></a>
+            <div class="post-body"><?= $ads['description']?></div>
+            <div class="text-muted small d-flex align-items-center flex-wrap">
+                <span class="pr-2"><span><?=__('author');?></span>
+                <a href="<?=$config['homeurl']?>/profile/?user=<?= $ads['user_id']?>"><?= $ads['author']?></a>
+                (<?= $ads['time']?>),</span>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</ul>
+

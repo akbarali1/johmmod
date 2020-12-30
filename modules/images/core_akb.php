@@ -16,5 +16,10 @@ class Json_Akb {
         $out1 = json_encode($out); 
         return $out1;
     }
+     public function bajarildi($input) {
+        $out = array( 'success' => array('id' => $input)); 
+        $out1 = json_encode($out); 
+        return $out1;
+    }
    
 }

@@ -5,7 +5,9 @@ $tools = di(Johncms\System\Legacy\Tools::class);
 $title = __("title");
 $req = $connection->table('ads_akbarali')
                     ->select(['name', 'description', 'time', 'ball', 'time_ads', 'user_id', 'id'])
-                    ->orderBy('id', 'desc')
+                    ->whereNotIn(
+      'id', $connection->table('ads_check')->where('user_id', $user->id)->select('ads_id'))
+                    ->orderBy('id', 'asc')
                     ->paginate(10);
 // Выводим номера страниц
 $pagination = $req->render();

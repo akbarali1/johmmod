@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Dec 30, 2020 at 09:30 PM
--- Server version: 5.7.29-log
--- PHP Version: 7.4.5
+-- Хост: localhost
+-- Время создания: Дек 31 2020 г., 11:53
+-- Версия сервера: 5.7.21-20-beget-5.7.21-20-1-log
+-- Версия PHP: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,15 +19,19 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `johncms`
+-- База данных: `akbarali_john9`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ads_akbarali`
+-- Структура таблицы `ads_akbarali`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 07:58
 --
 
+DROP TABLE IF EXISTS `ads_akbarali`;
 CREATE TABLE `ads_akbarali` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -41,37 +46,67 @@ CREATE TABLE `ads_akbarali` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `ads_akbarali`
+-- Дамп данных таблицы `ads_akbarali`
 --
 
 INSERT INTO `ads_akbarali` (`id`, `name`, `description`, `link`, `youtube`, `time`, `user_id`, `time_ads`, `type`, `ball`) VALUES
-(1, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349159, 1, 5, 1, 10),
-(2, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349397, 1, 220, 1, 10),
-(3, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349399, 1, 220, 1, 10),
-(4, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349401, 1, 220, 1, 10),
-(5, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349402, 1, 220, 1, 10),
-(6, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349402, 1, 220, 1, 10),
-(7, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349402, 1, 220, 1, 10),
-(8, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349403, 1, 220, 1, 10),
-(9, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349403, 1, 220, 1, 10),
-(10, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349403, 1, 220, 1, 10),
-(11, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349404, 1, 220, 1, 10),
-(12, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349404, 1, 220, 1, 10),
-(13, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349404, 1, 220, 1, 10),
-(14, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349404, 1, 220, 1, 10),
-(15, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349405, 1, 220, 1, 10),
-(16, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349405, 1, 220, 1, 10),
-(17, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349405, 1, 220, 1, 10),
-(18, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349406, 1, 220, 1, 10),
-(19, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349413, 1, 220, 1, 10),
-(20, 'UzHackersw.uz', 'Eng foydali maqolalar', 'https://uzhackersw.uz/', '', 1609349414, 1, 220, 1, 10);
+(1, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349159, 1, 5, 1, 10),
+(2, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349397, 1, 5, 1, 10),
+(3, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349399, 1, 5, 1, 10),
+(4, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349401, 1, 5, 1, 10),
+(5, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349402, 1, 5, 1, 10),
+(6, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349402, 1, 5, 1, 10),
+(7, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349402, 1, 5, 1, 10),
+(8, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349403, 1, 5, 1, 10),
+(9, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349403, 1, 5, 1, 10),
+(10, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349403, 1, 5, 1, 10),
+(11, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349404, 1, 5, 1, 10),
+(12, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349404, 1, 5, 1, 10),
+(13, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349404, 1, 5, 1, 10),
+(14, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349404, 1, 5, 1, 10),
+(15, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349405, 1, 5, 1, 10),
+(16, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349405, 1, 5, 1, 10),
+(17, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349405, 1, 5, 1, 10),
+(18, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349406, 1, 5, 1, 10),
+(19, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349413, 1, 5, 1, 10),
+(20, 'JohnCMS my Profile', 'В ближайшее время модуль будет распространяться бесплатно. Нажмите +5 на мою карму', 'https://johncms.com/profile/?user=38217', '', 1609349414, 1, 5, 1, 10);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog`
+-- Структура таблицы `ads_check`
+--
+-- Создание: Дек 31 2020 г., 06:40
+-- Последнее обновление: Дек 31 2020 г., 08:31
 --
 
+DROP TABLE IF EXISTS `ads_check`;
+CREATE TABLE `ads_check` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `ads_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `ads_check`
+--
+
+INSERT INTO `ads_check` (`id`, `user_id`, `status`, `time`, `ads_id`) VALUES
+(24, 2, 1, '2020-12-31 00:00:00', 0),
+(25, 2, 1, '2020-12-31 00:00:00', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `blog`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
+--
+
+DROP TABLE IF EXISTS `blog`;
 CREATE TABLE `blog` (
   `id` int(11) UNSIGNED NOT NULL,
   `mname` int(11) NOT NULL,
@@ -90,7 +125,7 @@ CREATE TABLE `blog` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `blog`
+-- Дамп данных таблицы `blog`
 --
 
 INSERT INTO `blog` (`id`, `mname`, `name`, `maname`, `text`, `types_id`, `types`, `link`, `korildi`, `rasm_manzili`, `time`, `tg`, `vk`, `fb`) VALUES
@@ -219,9 +254,13 @@ INSERT INTO `blog` (`id`, `mname`, `name`, `maname`, `text`, `types_id`, `types`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog_articles`
+-- Структура таблицы `blog_articles`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `blog_articles`;
 CREATE TABLE `blog_articles` (
   `id` int(10) UNSIGNED NOT NULL,
   `section_id` int(10) UNSIGNED NOT NULL,
@@ -242,7 +281,7 @@ CREATE TABLE `blog_articles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `blog_articles`
+-- Дамп данных таблицы `blog_articles`
 --
 
 INSERT INTO `blog_articles` (`id`, `section_id`, `name`, `page_title`, `code`, `keywords`, `description`, `preview_text`, `text`, `view_count`, `tags`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -251,9 +290,12 @@ INSERT INTO `blog_articles` (`id`, `section_id`, `name`, `page_title`, `code`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog_comments`
+-- Структура таблицы `blog_comments`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `blog_comments`;
 CREATE TABLE `blog_comments` (
   `id` int(10) UNSIGNED NOT NULL,
   `article_id` int(10) UNSIGNED NOT NULL,
@@ -267,9 +309,13 @@ CREATE TABLE `blog_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog_search_index`
+-- Структура таблицы `blog_search_index`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `blog_search_index`;
 CREATE TABLE `blog_search_index` (
   `id` int(10) UNSIGNED NOT NULL,
   `article_id` int(10) UNSIGNED NOT NULL,
@@ -277,7 +323,7 @@ CREATE TABLE `blog_search_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `blog_search_index`
+-- Дамп данных таблицы `blog_search_index`
 --
 
 INSERT INTO `blog_search_index` (`id`, `article_id`, `text`) VALUES
@@ -286,9 +332,13 @@ INSERT INTO `blog_search_index` (`id`, `article_id`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog_sections`
+-- Структура таблицы `blog_sections`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `blog_sections`;
 CREATE TABLE `blog_sections` (
   `id` int(10) UNSIGNED NOT NULL,
   `parent` int(11) DEFAULT NULL,
@@ -303,7 +353,7 @@ CREATE TABLE `blog_sections` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `blog_sections`
+-- Дамп данных таблицы `blog_sections`
 --
 
 INSERT INTO `blog_sections` (`id`, `parent`, `name`, `code`, `text`, `keywords`, `description`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -321,9 +371,13 @@ INSERT INTO `blog_sections` (`id`, `parent`, `name`, `code`, `text`, `keywords`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog_votes`
+-- Структура таблицы `blog_votes`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `blog_votes`;
 CREATE TABLE `blog_votes` (
   `id` int(10) UNSIGNED NOT NULL,
   `article_id` int(10) UNSIGNED NOT NULL,
@@ -332,7 +386,7 @@ CREATE TABLE `blog_votes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `blog_votes`
+-- Дамп данных таблицы `blog_votes`
 --
 
 INSERT INTO `blog_votes` (`id`, `article_id`, `user_id`, `vote`) VALUES
@@ -341,9 +395,12 @@ INSERT INTO `blog_votes` (`id`, `article_id`, `user_id`, `vote`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_ads`
+-- Структура таблицы `cms_ads`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_ads`;
 CREATE TABLE `cms_ads` (
   `id` int(10) UNSIGNED NOT NULL,
   `type` tinyint(3) UNSIGNED DEFAULT '0',
@@ -367,9 +424,12 @@ CREATE TABLE `cms_ads` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_album_cat`
+-- Структура таблицы `cms_album_cat`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_album_cat`;
 CREATE TABLE `cms_album_cat` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
@@ -383,9 +443,12 @@ CREATE TABLE `cms_album_cat` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_album_comments`
+-- Структура таблицы `cms_album_comments`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_album_comments`;
 CREATE TABLE `cms_album_comments` (
   `id` int(10) UNSIGNED NOT NULL,
   `sub_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -399,9 +462,12 @@ CREATE TABLE `cms_album_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_album_downloads`
+-- Структура таблицы `cms_album_downloads`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_album_downloads`;
 CREATE TABLE `cms_album_downloads` (
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `file_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -411,9 +477,12 @@ CREATE TABLE `cms_album_downloads` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_album_files`
+-- Структура таблицы `cms_album_files`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_album_files`;
 CREATE TABLE `cms_album_files` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
@@ -435,9 +504,12 @@ CREATE TABLE `cms_album_files` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_album_views`
+-- Структура таблицы `cms_album_views`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_album_views`;
 CREATE TABLE `cms_album_views` (
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `file_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -447,9 +519,12 @@ CREATE TABLE `cms_album_views` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_album_votes`
+-- Структура таблицы `cms_album_votes`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_album_votes`;
 CREATE TABLE `cms_album_votes` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -460,9 +535,12 @@ CREATE TABLE `cms_album_votes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_ban_ip`
+-- Структура таблицы `cms_ban_ip`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_ban_ip`;
 CREATE TABLE `cms_ban_ip` (
   `id` int(10) UNSIGNED NOT NULL,
   `ip1` bigint(20) NOT NULL DEFAULT '0',
@@ -477,9 +555,12 @@ CREATE TABLE `cms_ban_ip` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_ban_users`
+-- Структура таблицы `cms_ban_users`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_ban_users`;
 CREATE TABLE `cms_ban_users` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -495,9 +576,12 @@ CREATE TABLE `cms_ban_users` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_contact`
+-- Структура таблицы `cms_contact`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_contact`;
 CREATE TABLE `cms_contact` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -512,9 +596,12 @@ CREATE TABLE `cms_contact` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_counters`
+-- Структура таблицы `cms_counters`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_counters`;
 CREATE TABLE `cms_counters` (
   `id` int(10) UNSIGNED NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '1',
@@ -528,9 +615,12 @@ CREATE TABLE `cms_counters` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_forum_files`
+-- Структура таблицы `cms_forum_files`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_forum_files`;
 CREATE TABLE `cms_forum_files` (
   `id` int(10) UNSIGNED NOT NULL,
   `cat` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -547,9 +637,12 @@ CREATE TABLE `cms_forum_files` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_forum_rdm`
+-- Структура таблицы `cms_forum_rdm`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_forum_rdm`;
 CREATE TABLE `cms_forum_rdm` (
   `topic_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -559,9 +652,12 @@ CREATE TABLE `cms_forum_rdm` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_forum_vote`
+-- Структура таблицы `cms_forum_vote`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_forum_vote`;
 CREATE TABLE `cms_forum_vote` (
   `id` int(10) UNSIGNED NOT NULL,
   `type` int(11) NOT NULL DEFAULT '0',
@@ -574,9 +670,12 @@ CREATE TABLE `cms_forum_vote` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_forum_vote_users`
+-- Структура таблицы `cms_forum_vote_users`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_forum_vote_users`;
 CREATE TABLE `cms_forum_vote_users` (
   `id` int(10) UNSIGNED NOT NULL,
   `user` int(11) NOT NULL DEFAULT '0',
@@ -587,9 +686,12 @@ CREATE TABLE `cms_forum_vote_users` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_library_comments`
+-- Структура таблицы `cms_library_comments`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_library_comments`;
 CREATE TABLE `cms_library_comments` (
   `id` int(10) UNSIGNED NOT NULL,
   `sub_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -603,9 +705,12 @@ CREATE TABLE `cms_library_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_library_rating`
+-- Структура таблицы `cms_library_rating`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_library_rating`;
 CREATE TABLE `cms_library_rating` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
@@ -616,9 +721,12 @@ CREATE TABLE `cms_library_rating` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_mail`
+-- Структура таблицы `cms_mail`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_mail`;
 CREATE TABLE `cms_mail` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -638,9 +746,13 @@ CREATE TABLE `cms_mail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_sessions`
+-- Структура таблицы `cms_sessions`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 08:07
 --
 
+DROP TABLE IF EXISTS `cms_sessions`;
 CREATE TABLE `cms_sessions` (
   `session_id` char(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `ip` bigint(20) NOT NULL DEFAULT '0',
@@ -653,12 +765,24 @@ CREATE TABLE `cms_sessions` (
   `place` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `cms_sessions`
+--
+
+INSERT INTO `cms_sessions` (`session_id`, `ip`, `ip_via_proxy`, `browser`, `lastdate`, `sestime`, `views`, `movings`, `place`) VALUES
+('4deb74c9e1a404fecd0d58b5f6e21861', 86888380, 0, 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)', 1609395642, 1609395642, 1, 1, '/'),
+('a2d48d82a4f874f5df930bf7b4db792a', 3588644821, 0, 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1609390754, 1609390747, 3, 2, '/login'),
+('f6fc7f1a2e45718f670161a66a817bf0', 3588645939, 0, 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1609402057, 1609402045, 3, 2, '/login');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_users_data`
+-- Структура таблицы `cms_users_data`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_users_data`;
 CREATE TABLE `cms_users_data` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -669,9 +793,12 @@ CREATE TABLE `cms_users_data` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_users_guestbook`
+-- Структура таблицы `cms_users_guestbook`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `cms_users_guestbook`;
 CREATE TABLE `cms_users_guestbook` (
   `id` int(10) UNSIGNED NOT NULL,
   `sub_id` int(10) UNSIGNED NOT NULL,
@@ -685,9 +812,13 @@ CREATE TABLE `cms_users_guestbook` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cms_users_iphistory`
+-- Структура таблицы `cms_users_iphistory`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 06:18
 --
 
+DROP TABLE IF EXISTS `cms_users_iphistory`;
 CREATE TABLE `cms_users_iphistory` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
@@ -697,18 +828,23 @@ CREATE TABLE `cms_users_iphistory` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `cms_users_iphistory`
+-- Дамп данных таблицы `cms_users_iphistory`
 --
 
 INSERT INTO `cms_users_iphistory` (`id`, `user_id`, `ip`, `ip_via_proxy`, `time`) VALUES
-(1, 1, 0, 0, 1603897408);
+(1, 1, 0, 0, 1603897408),
+(2, 1, 2130706433, 0, 1609352501),
+(3, 1, 3588644821, 0, 1609395292);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `download__bookmark`
+-- Структура таблицы `download__bookmark`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `download__bookmark`;
 CREATE TABLE `download__bookmark` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -718,9 +854,13 @@ CREATE TABLE `download__bookmark` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `download__category`
+-- Структура таблицы `download__category`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `download__category`;
 CREATE TABLE `download__category` (
   `id` int(10) UNSIGNED NOT NULL,
   `refid` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -735,7 +875,7 @@ CREATE TABLE `download__category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `download__category`
+-- Дамп данных таблицы `download__category`
 --
 
 INSERT INTO `download__category` (`id`, `refid`, `dir`, `sort`, `name`, `total`, `rus_name`, `text`, `field`, `desc`) VALUES
@@ -744,9 +884,12 @@ INSERT INTO `download__category` (`id`, `refid`, `dir`, `sort`, `name`, `total`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `download__comments`
+-- Структура таблицы `download__comments`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `download__comments`;
 CREATE TABLE `download__comments` (
   `id` int(10) UNSIGNED NOT NULL,
   `sub_id` int(10) UNSIGNED NOT NULL,
@@ -760,9 +903,12 @@ CREATE TABLE `download__comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `download__files`
+-- Структура таблицы `download__files`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `download__files`;
 CREATE TABLE `download__files` (
   `id` int(10) UNSIGNED NOT NULL,
   `refid` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -783,9 +929,12 @@ CREATE TABLE `download__files` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `download__more`
+-- Структура таблицы `download__more`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `download__more`;
 CREATE TABLE `download__more` (
   `id` int(10) UNSIGNED NOT NULL,
   `refid` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -798,9 +947,13 @@ CREATE TABLE `download__more` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `email_messages`
+-- Структура таблицы `email_messages`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `email_messages`;
 CREATE TABLE `email_messages` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `priority` int(11) DEFAULT NULL COMMENT 'Priority of sending the message',
@@ -813,7 +966,7 @@ CREATE TABLE `email_messages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `email_messages`
+-- Дамп данных таблицы `email_messages`
 --
 
 INSERT INTO `email_messages` (`id`, `priority`, `locale`, `template`, `fields`, `sent_at`, `created_at`, `updated_at`) VALUES
@@ -823,9 +976,12 @@ INSERT INTO `email_messages` (`id`, `priority`, `locale`, `template`, `fields`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forum_messages`
+-- Структура таблицы `forum_messages`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `forum_messages`;
 CREATE TABLE `forum_messages` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `topic_id` int(11) NOT NULL,
@@ -847,9 +1003,12 @@ CREATE TABLE `forum_messages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forum_sections`
+-- Структура таблицы `forum_sections`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `forum_sections`;
 CREATE TABLE `forum_sections` (
   `id` int(10) UNSIGNED NOT NULL,
   `parent` int(11) DEFAULT NULL,
@@ -865,9 +1024,12 @@ CREATE TABLE `forum_sections` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forum_topic`
+-- Структура таблицы `forum_topic`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `forum_topic`;
 CREATE TABLE `forum_topic` (
   `id` int(10) UNSIGNED NOT NULL,
   `section_id` int(10) UNSIGNED DEFAULT NULL,
@@ -901,9 +1063,13 @@ CREATE TABLE `forum_topic` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `guest`
+-- Структура таблицы `guest`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 07:25
 --
 
+DROP TABLE IF EXISTS `guest`;
 CREATE TABLE `guest` (
   `id` int(10) UNSIGNED NOT NULL,
   `adm` tinyint(1) NOT NULL DEFAULT '0',
@@ -922,7 +1088,7 @@ CREATE TABLE `guest` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `guest`
+-- Дамп данных таблицы `guest`
 --
 
 INSERT INTO `guest` (`id`, `adm`, `time`, `user_id`, `name`, `text`, `ip`, `browser`, `admin`, `otvet`, `otime`, `edit_who`, `edit_time`, `edit_count`) VALUES
@@ -938,9 +1104,13 @@ INSERT INTO `guest` (`id`, `adm`, `time`, `user_id`, `name`, `text`, `ip`, `brow
 -- --------------------------------------------------------
 
 --
--- Table structure for table `images_akb`
+-- Структура таблицы `images_akb`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 07:40
 --
 
+DROP TABLE IF EXISTS `images_akb`;
 CREATE TABLE `images_akb` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -949,18 +1119,23 @@ CREATE TABLE `images_akb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `images_akb`
+-- Дамп данных таблицы `images_akb`
 --
 
 INSERT INTO `images_akb` (`id`, `name`, `time`, `uploader_id`) VALUES
-(3, 'admin', 1604416668, 1);
+(3, 'admin', 1604416668, 1),
+(6, 'admin', 1609399919, 1),
+(7, 'admin', 1609400457, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `karma_users`
+-- Структура таблицы `karma_users`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `karma_users`;
 CREATE TABLE `karma_users` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -975,9 +1150,13 @@ CREATE TABLE `karma_users` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `library_cats`
+-- Структура таблицы `library_cats`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `library_cats`;
 CREATE TABLE `library_cats` (
   `id` int(10) UNSIGNED NOT NULL,
   `parent` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -989,7 +1168,7 @@ CREATE TABLE `library_cats` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `library_cats`
+-- Дамп данных таблицы `library_cats`
 --
 
 INSERT INTO `library_cats` (`id`, `parent`, `name`, `description`, `dir`, `pos`, `user_add`) VALUES
@@ -998,9 +1177,12 @@ INSERT INTO `library_cats` (`id`, `parent`, `name`, `description`, `dir`, `pos`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `library_tags`
+-- Структура таблицы `library_tags`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `library_tags`;
 CREATE TABLE `library_tags` (
   `id` int(10) UNSIGNED NOT NULL,
   `lib_text_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -1010,9 +1192,12 @@ CREATE TABLE `library_tags` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `library_texts`
+-- Структура таблицы `library_texts`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `library_texts`;
 CREATE TABLE `library_texts` (
   `id` int(10) UNSIGNED NOT NULL,
   `cat_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -1031,9 +1216,13 @@ CREATE TABLE `library_texts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news`
+-- Структура таблицы `news`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `news`;
 CREATE TABLE `news` (
   `id` int(10) UNSIGNED NOT NULL,
   `time` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -1044,7 +1233,7 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `news`
+-- Дамп данных таблицы `news`
 --
 
 INSERT INTO `news` (`id`, `time`, `avt`, `name`, `text`, `kom`) VALUES
@@ -1054,9 +1243,13 @@ INSERT INTO `news` (`id`, `time`, `avt`, `name`, `text`, `kom`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news_articles`
+-- Структура таблицы `news_articles`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `news_articles`;
 CREATE TABLE `news_articles` (
   `id` int(10) UNSIGNED NOT NULL,
   `section_id` int(10) UNSIGNED DEFAULT NULL,
@@ -1078,7 +1271,7 @@ CREATE TABLE `news_articles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `news_articles`
+-- Дамп данных таблицы `news_articles`
 --
 
 INSERT INTO `news_articles` (`id`, `section_id`, `active`, `name`, `page_title`, `code`, `keywords`, `description`, `preview_text`, `text`, `view_count`, `tags`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1087,9 +1280,12 @@ INSERT INTO `news_articles` (`id`, `section_id`, `active`, `name`, `page_title`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news_comments`
+-- Структура таблицы `news_comments`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `news_comments`;
 CREATE TABLE `news_comments` (
   `id` int(10) UNSIGNED NOT NULL,
   `article_id` int(10) UNSIGNED NOT NULL,
@@ -1103,9 +1299,13 @@ CREATE TABLE `news_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news_search_index`
+-- Структура таблицы `news_search_index`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `news_search_index`;
 CREATE TABLE `news_search_index` (
   `id` int(10) UNSIGNED NOT NULL,
   `article_id` int(10) UNSIGNED NOT NULL,
@@ -1113,7 +1313,7 @@ CREATE TABLE `news_search_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `news_search_index`
+-- Дамп данных таблицы `news_search_index`
 --
 
 INSERT INTO `news_search_index` (`id`, `article_id`, `text`) VALUES
@@ -1122,9 +1322,12 @@ INSERT INTO `news_search_index` (`id`, `article_id`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news_sections`
+-- Структура таблицы `news_sections`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `news_sections`;
 CREATE TABLE `news_sections` (
   `id` int(10) UNSIGNED NOT NULL,
   `parent` int(11) DEFAULT NULL,
@@ -1141,9 +1344,12 @@ CREATE TABLE `news_sections` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news_votes`
+-- Структура таблицы `news_votes`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `news_votes`;
 CREATE TABLE `news_votes` (
   `id` int(10) UNSIGNED NOT NULL,
   `article_id` int(10) UNSIGNED NOT NULL,
@@ -1154,9 +1360,12 @@ CREATE TABLE `news_votes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `notifications`
+-- Структура таблицы `notifications`
+--
+-- Создание: Дек 31 2020 г., 04:39
 --
 
+DROP TABLE IF EXISTS `notifications`;
 CREATE TABLE `notifications` (
   `id` int(10) UNSIGNED NOT NULL,
   `module` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Module name',
@@ -1173,9 +1382,13 @@ CREATE TABLE `notifications` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Структура таблицы `users`
+--
+-- Создание: Дек 31 2020 г., 04:39
+-- Последнее обновление: Дек 31 2020 г., 08:49
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -1234,30 +1447,37 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Дамп данных таблицы `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `name_lat`, `password`, `rights`, `failed_login`, `imname`, `sex`, `komm`, `postforum`, `postguest`, `yearofbirth`, `datereg`, `lastdate`, `mail`, `icq`, `skype`, `jabber`, `www`, `about`, `live`, `mibile`, `status`, `ip`, `ip_via_proxy`, `browser`, `preg`, `regadm`, `mailvis`, `dayb`, `monthb`, `sestime`, `total_on_site`, `lastpost`, `rest_code`, `rest_time`, `movings`, `place`, `set_user`, `set_forum`, `set_mail`, `karma_plus`, `karma_minus`, `karma_time`, `karma_off`, `comm_count`, `comm_old`, `smileys`, `notification_settings`, `email_confirmed`, `confirmation_code`, `new_email`, `admin_notes`, `balls_akb`) VALUES
-(1, 'admin', 'admin', '61ed3d9e9dd120e8b63d8bbd7a941696', 9, 0, '', 'm', 0, 0, 8, 0, 1603897408, 1609352501, 'Akbarali9705@mail.ru', 0, '', '', 'http://johncms.uz', '', '', '', '', 2130706433, 0, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36', 1, '', 0, 0, 0, 1609351973, 0, 1604416304, '5505712229fb1eb500efadddc0353264', 1604150362, 2, '/ads_akbarali/view?id=1', 'a:0:{}', 'a:0:{}', 'a:0:{}', 0, 0, 1609345970, 0, 0, 0, 'a:0:{}', NULL, 1, NULL, NULL, NULL, '');
+(1, 'admin', 'admin', '61ed3d9e9dd120e8b63d8bbd7a941696', 9, 0, '', 'm', 0, 0, 9, 0, 1603897408, 1609402044, 'Akbarali9705@mail.ru', 0, '', '', 'http://johncms.uz', '', '', '', '', 3588645939, 0, 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1, '', 0, 0, 0, 1609402039, 0, 1609399529, '5505712229fb1eb500efadddc0353264', 1604150362, 1, '/login', 'a:0:{}', 'a:0:{}', 'a:0:{}', 0, 0, 1609345970, 0, 0, 0, 'a:0:{}', NULL, 1, NULL, NULL, NULL, '120'),
+(2, 'demo', 'demo', 'f085c76d7ddfef25a703190dca364687', 0, 0, '', 'm', 0, 0, 9, 0, 1603897408, 1609404583, 'demo@webschool.uz', 0, '', '', 'http://johncms.uz', '', '', '', '', 3588645939, 0, 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1, '', 0, 0, 0, 1609404540, 0, 1609399529, '5505712229fb1eb500efadddc0353264', 1604150362, 3, '/ads_akbarali', 'a:0:{}', 'a:0:{}', 'a:0:{}', 0, 0, 1609345970, 0, 0, 0, 'a:0:{}', NULL, 1, NULL, NULL, NULL, '60');
 
 --
--- Indexes for dumped tables
+-- Индексы сохранённых таблиц
 --
 
 --
--- Indexes for table `ads_akbarali`
+-- Индексы таблицы `ads_akbarali`
 --
 ALTER TABLE `ads_akbarali`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `blog`
+-- Индексы таблицы `ads_check`
+--
+ALTER TABLE `ads_check`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `blog`
 --
 ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `blog_articles`
+-- Индексы таблицы `blog_articles`
 --
 ALTER TABLE `blog_articles`
   ADD PRIMARY KEY (`id`),
@@ -1267,21 +1487,21 @@ ALTER TABLE `blog_articles`
   ADD KEY `blog_articles_tags_index` (`tags`);
 
 --
--- Indexes for table `blog_comments`
+-- Индексы таблицы `blog_comments`
 --
 ALTER TABLE `blog_comments`
   ADD PRIMARY KEY (`id`),
   ADD KEY `blog_comments_article_id_index` (`article_id`);
 
 --
--- Indexes for table `blog_search_index`
+-- Индексы таблицы `blog_search_index`
 --
 ALTER TABLE `blog_search_index`
   ADD PRIMARY KEY (`id`),
   ADD KEY `blog_search_index_article_id_index` (`article_id`);
 
 --
--- Indexes for table `blog_sections`
+-- Индексы таблицы `blog_sections`
 --
 ALTER TABLE `blog_sections`
   ADD PRIMARY KEY (`id`),
@@ -1289,20 +1509,20 @@ ALTER TABLE `blog_sections`
   ADD KEY `blog_sections_code_index` (`code`);
 
 --
--- Indexes for table `blog_votes`
+-- Индексы таблицы `blog_votes`
 --
 ALTER TABLE `blog_votes`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `article_user` (`article_id`,`user_id`);
 
 --
--- Indexes for table `cms_ads`
+-- Индексы таблицы `cms_ads`
 --
 ALTER TABLE `cms_ads`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `cms_album_cat`
+-- Индексы таблицы `cms_album_cat`
 --
 ALTER TABLE `cms_album_cat`
   ADD PRIMARY KEY (`id`),
@@ -1310,7 +1530,7 @@ ALTER TABLE `cms_album_cat`
   ADD KEY `access` (`access`);
 
 --
--- Indexes for table `cms_album_comments`
+-- Индексы таблицы `cms_album_comments`
 --
 ALTER TABLE `cms_album_comments`
   ADD PRIMARY KEY (`id`),
@@ -1318,13 +1538,13 @@ ALTER TABLE `cms_album_comments`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `cms_album_downloads`
+-- Индексы таблицы `cms_album_downloads`
 --
 ALTER TABLE `cms_album_downloads`
   ADD PRIMARY KEY (`user_id`,`file_id`);
 
 --
--- Indexes for table `cms_album_files`
+-- Индексы таблицы `cms_album_files`
 --
 ALTER TABLE `cms_album_files`
   ADD PRIMARY KEY (`id`),
@@ -1333,13 +1553,13 @@ ALTER TABLE `cms_album_files`
   ADD KEY `access` (`access`);
 
 --
--- Indexes for table `cms_album_views`
+-- Индексы таблицы `cms_album_views`
 --
 ALTER TABLE `cms_album_views`
   ADD PRIMARY KEY (`user_id`,`file_id`);
 
 --
--- Indexes for table `cms_album_votes`
+-- Индексы таблицы `cms_album_votes`
 --
 ALTER TABLE `cms_album_votes`
   ADD PRIMARY KEY (`id`),
@@ -1347,7 +1567,7 @@ ALTER TABLE `cms_album_votes`
   ADD KEY `file_id` (`file_id`);
 
 --
--- Indexes for table `cms_ban_ip`
+-- Индексы таблицы `cms_ban_ip`
 --
 ALTER TABLE `cms_ban_ip`
   ADD PRIMARY KEY (`id`),
@@ -1355,7 +1575,7 @@ ALTER TABLE `cms_ban_ip`
   ADD UNIQUE KEY `ip2` (`ip2`);
 
 --
--- Indexes for table `cms_ban_users`
+-- Индексы таблицы `cms_ban_users`
 --
 ALTER TABLE `cms_ban_users`
   ADD PRIMARY KEY (`id`),
@@ -1363,7 +1583,7 @@ ALTER TABLE `cms_ban_users`
   ADD KEY `ban_time` (`ban_time`);
 
 --
--- Indexes for table `cms_contact`
+-- Индексы таблицы `cms_contact`
 --
 ALTER TABLE `cms_contact`
   ADD PRIMARY KEY (`id`),
@@ -1372,13 +1592,13 @@ ALTER TABLE `cms_contact`
   ADD KEY `ban` (`ban`);
 
 --
--- Indexes for table `cms_counters`
+-- Индексы таблицы `cms_counters`
 --
 ALTER TABLE `cms_counters`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `cms_forum_files`
+-- Индексы таблицы `cms_forum_files`
 --
 ALTER TABLE `cms_forum_files`
   ADD PRIMARY KEY (`id`),
@@ -1388,14 +1608,14 @@ ALTER TABLE `cms_forum_files`
   ADD KEY `post` (`post`);
 
 --
--- Indexes for table `cms_forum_rdm`
+-- Индексы таблицы `cms_forum_rdm`
 --
 ALTER TABLE `cms_forum_rdm`
   ADD PRIMARY KEY (`topic_id`,`user_id`),
   ADD KEY `time` (`time`);
 
 --
--- Indexes for table `cms_forum_vote`
+-- Индексы таблицы `cms_forum_vote`
 --
 ALTER TABLE `cms_forum_vote`
   ADD PRIMARY KEY (`id`),
@@ -1404,7 +1624,7 @@ ALTER TABLE `cms_forum_vote`
   ADD KEY `topic` (`topic`);
 
 --
--- Indexes for table `cms_forum_vote_users`
+-- Индексы таблицы `cms_forum_vote_users`
 --
 ALTER TABLE `cms_forum_vote_users`
   ADD PRIMARY KEY (`id`),
@@ -1412,7 +1632,7 @@ ALTER TABLE `cms_forum_vote_users`
   ADD KEY `topic` (`topic`);
 
 --
--- Indexes for table `cms_library_comments`
+-- Индексы таблицы `cms_library_comments`
 --
 ALTER TABLE `cms_library_comments`
   ADD PRIMARY KEY (`id`),
@@ -1420,14 +1640,14 @@ ALTER TABLE `cms_library_comments`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `cms_library_rating`
+-- Индексы таблицы `cms_library_rating`
 --
 ALTER TABLE `cms_library_rating`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_article` (`user_id`,`st_id`);
 
 --
--- Indexes for table `cms_mail`
+-- Индексы таблицы `cms_mail`
 --
 ALTER TABLE `cms_mail`
   ADD PRIMARY KEY (`id`),
@@ -1439,14 +1659,14 @@ ALTER TABLE `cms_mail`
   ADD KEY `delete` (`delete`);
 
 --
--- Indexes for table `cms_sessions`
+-- Индексы таблицы `cms_sessions`
 --
 ALTER TABLE `cms_sessions`
   ADD PRIMARY KEY (`session_id`),
   ADD KEY `lastdate` (`lastdate`);
 
 --
--- Indexes for table `cms_users_data`
+-- Индексы таблицы `cms_users_data`
 --
 ALTER TABLE `cms_users_data`
   ADD PRIMARY KEY (`id`),
@@ -1454,7 +1674,7 @@ ALTER TABLE `cms_users_data`
   ADD KEY `key` (`key`);
 
 --
--- Indexes for table `cms_users_guestbook`
+-- Индексы таблицы `cms_users_guestbook`
 --
 ALTER TABLE `cms_users_guestbook`
   ADD PRIMARY KEY (`id`),
@@ -1462,7 +1682,7 @@ ALTER TABLE `cms_users_guestbook`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `cms_users_iphistory`
+-- Индексы таблицы `cms_users_iphistory`
 --
 ALTER TABLE `cms_users_iphistory`
   ADD PRIMARY KEY (`id`),
@@ -1470,7 +1690,7 @@ ALTER TABLE `cms_users_iphistory`
   ADD KEY `user_ip` (`ip`);
 
 --
--- Indexes for table `download__bookmark`
+-- Индексы таблицы `download__bookmark`
 --
 ALTER TABLE `download__bookmark`
   ADD PRIMARY KEY (`id`),
@@ -1478,7 +1698,7 @@ ALTER TABLE `download__bookmark`
   ADD KEY `file_id` (`file_id`);
 
 --
--- Indexes for table `download__category`
+-- Индексы таблицы `download__category`
 --
 ALTER TABLE `download__category`
   ADD PRIMARY KEY (`id`),
@@ -1486,7 +1706,7 @@ ALTER TABLE `download__category`
   ADD KEY `total` (`total`);
 
 --
--- Indexes for table `download__comments`
+-- Индексы таблицы `download__comments`
 --
 ALTER TABLE `download__comments`
   ADD PRIMARY KEY (`id`),
@@ -1494,7 +1714,7 @@ ALTER TABLE `download__comments`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `download__files`
+-- Индексы таблицы `download__files`
 --
 ALTER TABLE `download__files`
   ADD PRIMARY KEY (`id`),
@@ -1505,7 +1725,7 @@ ALTER TABLE `download__files`
   ADD KEY `comm_count` (`comm_count`);
 
 --
--- Indexes for table `download__more`
+-- Индексы таблицы `download__more`
 --
 ALTER TABLE `download__more`
   ADD PRIMARY KEY (`id`),
@@ -1513,13 +1733,13 @@ ALTER TABLE `download__more`
   ADD KEY `time` (`time`);
 
 --
--- Indexes for table `email_messages`
+-- Индексы таблицы `email_messages`
 --
 ALTER TABLE `email_messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `forum_messages`
+-- Индексы таблицы `forum_messages`
 --
 ALTER TABLE `forum_messages`
   ADD PRIMARY KEY (`id`),
@@ -1528,21 +1748,21 @@ ALTER TABLE `forum_messages`
 ALTER TABLE `forum_messages` ADD FULLTEXT KEY `text` (`text`);
 
 --
--- Indexes for table `forum_sections`
+-- Индексы таблицы `forum_sections`
 --
 ALTER TABLE `forum_sections`
   ADD PRIMARY KEY (`id`),
   ADD KEY `parent` (`parent`);
 
 --
--- Indexes for table `forum_topic`
+-- Индексы таблицы `forum_topic`
 --
 ALTER TABLE `forum_topic`
   ADD PRIMARY KEY (`id`),
   ADD KEY `deleted` (`deleted`);
 
 --
--- Indexes for table `guest`
+-- Индексы таблицы `guest`
 --
 ALTER TABLE `guest`
   ADD PRIMARY KEY (`id`),
@@ -1551,13 +1771,13 @@ ALTER TABLE `guest`
   ADD KEY `ip` (`ip`);
 
 --
--- Indexes for table `images_akb`
+-- Индексы таблицы `images_akb`
 --
 ALTER TABLE `images_akb`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `karma_users`
+-- Индексы таблицы `karma_users`
 --
 ALTER TABLE `karma_users`
   ADD PRIMARY KEY (`id`),
@@ -1566,13 +1786,13 @@ ALTER TABLE `karma_users`
   ADD KEY `type` (`type`);
 
 --
--- Indexes for table `library_cats`
+-- Индексы таблицы `library_cats`
 --
 ALTER TABLE `library_cats`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `library_tags`
+-- Индексы таблицы `library_tags`
 --
 ALTER TABLE `library_tags`
   ADD PRIMARY KEY (`id`),
@@ -1580,7 +1800,7 @@ ALTER TABLE `library_tags`
   ADD KEY `tag_name` (`tag_name`);
 
 --
--- Indexes for table `library_texts`
+-- Индексы таблицы `library_texts`
 --
 ALTER TABLE `library_texts`
   ADD PRIMARY KEY (`id`),
@@ -1588,13 +1808,13 @@ ALTER TABLE `library_texts`
 ALTER TABLE `library_texts` ADD FULLTEXT KEY `text` (`text`);
 
 --
--- Indexes for table `news`
+-- Индексы таблицы `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `news_articles`
+-- Индексы таблицы `news_articles`
 --
 ALTER TABLE `news_articles`
   ADD PRIMARY KEY (`id`),
@@ -1604,21 +1824,21 @@ ALTER TABLE `news_articles`
   ADD KEY `news_articles_tags_index` (`tags`);
 
 --
--- Indexes for table `news_comments`
+-- Индексы таблицы `news_comments`
 --
 ALTER TABLE `news_comments`
   ADD PRIMARY KEY (`id`),
   ADD KEY `news_comments_article_id_index` (`article_id`);
 
 --
--- Indexes for table `news_search_index`
+-- Индексы таблицы `news_search_index`
 --
 ALTER TABLE `news_search_index`
   ADD PRIMARY KEY (`id`),
   ADD KEY `news_search_index_article_id_index` (`article_id`);
 
 --
--- Indexes for table `news_sections`
+-- Индексы таблицы `news_sections`
 --
 ALTER TABLE `news_sections`
   ADD PRIMARY KEY (`id`),
@@ -1626,14 +1846,14 @@ ALTER TABLE `news_sections`
   ADD KEY `news_sections_code_index` (`code`);
 
 --
--- Indexes for table `news_votes`
+-- Индексы таблицы `news_votes`
 --
 ALTER TABLE `news_votes`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `article_user` (`article_id`,`user_id`);
 
 --
--- Indexes for table `notifications`
+-- Индексы таблицы `notifications`
 --
 ALTER TABLE `notifications`
   ADD PRIMARY KEY (`id`),
@@ -1641,7 +1861,7 @@ ALTER TABLE `notifications`
   ADD KEY `notifications_user_id_index` (`user_id`);
 
 --
--- Indexes for table `users`
+-- Индексы таблицы `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
@@ -1649,345 +1869,351 @@ ALTER TABLE `users`
   ADD KEY `lastdate` (`lastdate`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT для сохранённых таблиц
 --
 
 --
--- AUTO_INCREMENT for table `ads_akbarali`
+-- AUTO_INCREMENT для таблицы `ads_akbarali`
 --
 ALTER TABLE `ads_akbarali`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `blog`
+-- AUTO_INCREMENT для таблицы `ads_check`
+--
+ALTER TABLE `ads_check`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT для таблицы `blog`
 --
 ALTER TABLE `blog`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 
 --
--- AUTO_INCREMENT for table `blog_articles`
+-- AUTO_INCREMENT для таблицы `blog_articles`
 --
 ALTER TABLE `blog_articles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `blog_comments`
+-- AUTO_INCREMENT для таблицы `blog_comments`
 --
 ALTER TABLE `blog_comments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `blog_search_index`
+-- AUTO_INCREMENT для таблицы `blog_search_index`
 --
 ALTER TABLE `blog_search_index`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `blog_sections`
+-- AUTO_INCREMENT для таблицы `blog_sections`
 --
 ALTER TABLE `blog_sections`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `blog_votes`
+-- AUTO_INCREMENT для таблицы `blog_votes`
 --
 ALTER TABLE `blog_votes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `cms_ads`
+-- AUTO_INCREMENT для таблицы `cms_ads`
 --
 ALTER TABLE `cms_ads`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_album_cat`
+-- AUTO_INCREMENT для таблицы `cms_album_cat`
 --
 ALTER TABLE `cms_album_cat`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_album_comments`
+-- AUTO_INCREMENT для таблицы `cms_album_comments`
 --
 ALTER TABLE `cms_album_comments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_album_files`
+-- AUTO_INCREMENT для таблицы `cms_album_files`
 --
 ALTER TABLE `cms_album_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_album_votes`
+-- AUTO_INCREMENT для таблицы `cms_album_votes`
 --
 ALTER TABLE `cms_album_votes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_ban_ip`
+-- AUTO_INCREMENT для таблицы `cms_ban_ip`
 --
 ALTER TABLE `cms_ban_ip`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_ban_users`
+-- AUTO_INCREMENT для таблицы `cms_ban_users`
 --
 ALTER TABLE `cms_ban_users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_contact`
+-- AUTO_INCREMENT для таблицы `cms_contact`
 --
 ALTER TABLE `cms_contact`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_counters`
+-- AUTO_INCREMENT для таблицы `cms_counters`
 --
 ALTER TABLE `cms_counters`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_forum_files`
+-- AUTO_INCREMENT для таблицы `cms_forum_files`
 --
 ALTER TABLE `cms_forum_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_forum_vote`
+-- AUTO_INCREMENT для таблицы `cms_forum_vote`
 --
 ALTER TABLE `cms_forum_vote`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_forum_vote_users`
+-- AUTO_INCREMENT для таблицы `cms_forum_vote_users`
 --
 ALTER TABLE `cms_forum_vote_users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_library_comments`
+-- AUTO_INCREMENT для таблицы `cms_library_comments`
 --
 ALTER TABLE `cms_library_comments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_library_rating`
+-- AUTO_INCREMENT для таблицы `cms_library_rating`
 --
 ALTER TABLE `cms_library_rating`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_mail`
+-- AUTO_INCREMENT для таблицы `cms_mail`
 --
 ALTER TABLE `cms_mail`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_users_data`
+-- AUTO_INCREMENT для таблицы `cms_users_data`
 --
 ALTER TABLE `cms_users_data`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_users_guestbook`
+-- AUTO_INCREMENT для таблицы `cms_users_guestbook`
 --
 ALTER TABLE `cms_users_guestbook`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cms_users_iphistory`
+-- AUTO_INCREMENT для таблицы `cms_users_iphistory`
 --
 ALTER TABLE `cms_users_iphistory`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `download__bookmark`
+-- AUTO_INCREMENT для таблицы `download__bookmark`
 --
 ALTER TABLE `download__bookmark`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `download__category`
+-- AUTO_INCREMENT для таблицы `download__category`
 --
 ALTER TABLE `download__category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `download__comments`
+-- AUTO_INCREMENT для таблицы `download__comments`
 --
 ALTER TABLE `download__comments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `download__files`
+-- AUTO_INCREMENT для таблицы `download__files`
 --
 ALTER TABLE `download__files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `download__more`
+-- AUTO_INCREMENT для таблицы `download__more`
 --
 ALTER TABLE `download__more`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `email_messages`
+-- AUTO_INCREMENT для таблицы `email_messages`
 --
 ALTER TABLE `email_messages`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `forum_messages`
+-- AUTO_INCREMENT для таблицы `forum_messages`
 --
 ALTER TABLE `forum_messages`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `forum_sections`
+-- AUTO_INCREMENT для таблицы `forum_sections`
 --
 ALTER TABLE `forum_sections`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `forum_topic`
+-- AUTO_INCREMENT для таблицы `forum_topic`
 --
 ALTER TABLE `forum_topic`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `guest`
+-- AUTO_INCREMENT для таблицы `guest`
 --
 ALTER TABLE `guest`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `images_akb`
+-- AUTO_INCREMENT для таблицы `images_akb`
 --
 ALTER TABLE `images_akb`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `karma_users`
+-- AUTO_INCREMENT для таблицы `karma_users`
 --
 ALTER TABLE `karma_users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `library_cats`
+-- AUTO_INCREMENT для таблицы `library_cats`
 --
 ALTER TABLE `library_cats`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `library_tags`
+-- AUTO_INCREMENT для таблицы `library_tags`
 --
 ALTER TABLE `library_tags`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `library_texts`
+-- AUTO_INCREMENT для таблицы `library_texts`
 --
 ALTER TABLE `library_texts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `news`
+-- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `news_articles`
+-- AUTO_INCREMENT для таблицы `news_articles`
 --
 ALTER TABLE `news_articles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `news_comments`
+-- AUTO_INCREMENT для таблицы `news_comments`
 --
 ALTER TABLE `news_comments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `news_search_index`
+-- AUTO_INCREMENT для таблицы `news_search_index`
 --
 ALTER TABLE `news_search_index`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `news_sections`
+-- AUTO_INCREMENT для таблицы `news_sections`
 --
 ALTER TABLE `news_sections`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `news_votes`
+-- AUTO_INCREMENT для таблицы `news_votes`
 --
 ALTER TABLE `news_votes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `notifications`
+-- AUTO_INCREMENT для таблицы `notifications`
 --
 ALTER TABLE `notifications`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- Ограничения внешнего ключа сохраненных таблиц
 --
 
 --
--- Constraints for table `blog_articles`
+-- Ограничения внешнего ключа таблицы `blog_articles`
 --
 ALTER TABLE `blog_articles`
   ADD CONSTRAINT `blog_articles_section_id_foreign` FOREIGN KEY (`section_id`) REFERENCES `blog_sections` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `blog_comments`
+-- Ограничения внешнего ключа таблицы `blog_comments`
 --
 ALTER TABLE `blog_comments`
   ADD CONSTRAINT `blog_comments_article_id_foreign` FOREIGN KEY (`article_id`) REFERENCES `blog_articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `blog_search_index`
+-- Ограничения внешнего ключа таблицы `blog_search_index`
 --
 ALTER TABLE `blog_search_index`
   ADD CONSTRAINT `blog_search_index_article_id_foreign` FOREIGN KEY (`article_id`) REFERENCES `blog_articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `blog_votes`
+-- Ограничения внешнего ключа таблицы `blog_votes`
 --
 ALTER TABLE `blog_votes`
   ADD CONSTRAINT `blog_votes_article_id_foreign` FOREIGN KEY (`article_id`) REFERENCES `blog_articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `news_comments`
+-- Ограничения внешнего ключа таблицы `news_comments`
 --
 ALTER TABLE `news_comments`
   ADD CONSTRAINT `news_comments_article_id_foreign` FOREIGN KEY (`article_id`) REFERENCES `news_articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `news_search_index`
+-- Ограничения внешнего ключа таблицы `news_search_index`
 --
 ALTER TABLE `news_search_index`
   ADD CONSTRAINT `news_search_index_article_id_foreign` FOREIGN KEY (`article_id`) REFERENCES `news_articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `news_votes`
+-- Ограничения внешнего ключа таблицы `news_votes`
 --
 ALTER TABLE `news_votes`
   ADD CONSTRAINT `news_votes_article_id_foreign` FOREIGN KEY (`article_id`) REFERENCES `news_articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `notifications`
+-- Ограничения внешнего ключа таблицы `notifications`
 --
 ALTER TABLE `notifications`
   ADD CONSTRAINT `notifications_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;

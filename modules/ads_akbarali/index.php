@@ -46,7 +46,15 @@ if (!$user->is_valid) {
     exit;
 }
 
+if ($connection->table('ads_check')->where('user_id', $user->id)->doesntExist()){
 
+$connection->table('ads_check')
+            ->insert([
+                'user_id' => $user->id, 
+                'status' => 1, 
+                'time' => date('Y-m-d', time()), 
+                'ads_id' => 0]);
+}
 switch ($act) {
  
     case 'add':

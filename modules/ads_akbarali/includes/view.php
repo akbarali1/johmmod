@@ -1,7 +1,8 @@
 <?php
 declare(strict_types = 1);
-if ($request->getMethod() === 'POST') {
- echo 'ha nimadur bor';
+if ($connection->table('ads_check')->where('ads_id', $id)->where('user_id', $user->id)->exists()){
+header('Location: '.$config['homeurl'].'/ads_akbarali/');
+die;
 }
 
 $question = $connection->table('ads_akbarali')

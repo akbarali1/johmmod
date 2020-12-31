@@ -149,6 +149,7 @@ if ($request->getMethod() === 'POST') {
                 'set_forum'    => [],
                 'set_mail'     => [],
                 'smileys'      => [],
+                'balls_akb'    => 0,
 
                 'email_confirmed'   => ! empty($config['user_email_confirmation']) ? null : 1,
                 'confirmation_code' => ! empty($config['user_email_confirmation']) ? uniqid('email_', true) : null,

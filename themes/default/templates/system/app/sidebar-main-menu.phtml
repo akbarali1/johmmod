@@ -1,11 +1,4 @@
 <?php
-/**
- * @var string $locale
- * @var Johncms\System\Legacy\Tools $tools
- * @var Johncms\System\Users\User $user
- * @var Johncms\Ads $ads
- */
-
 /** @var \Johncms\Counters $counters */
 $counters = $container->get('counters');
 $forum_counters = $counters->forumCounters();
@@ -29,30 +22,6 @@ $ads_array = $ads->getAds();
         </div>
     <?php endif; ?>
     <ul class="nav nav__vertical">
-        <li>
-            <a href="/news/">
-                <svg class="icon">
-                    <use xlink:href="<?= $this->asset('icons/sprite.svg') ?>#book"/>
-                </svg>
-                <span class="flex-grow-1"><?= d__('system', 'News archive') ?></span>
-                <?php if ($news_counters['new'] > 0): ?>
-                    <span class="badge badge-pill badge-danger">+ <?= $tools->formatNumber($news_counters['new']) ?></span>
-                <?php endif ?>
-            </a>
-        </li>
-        <?php if ($config['mod_forum'] || $user->rights >= 7): ?>
-            <li>
-                <a href="/forum/">
-                    <svg class="icon">
-                        <use xlink:href="<?= $this->asset('icons/sprite.svg') ?>#forum"/>
-                    </svg>
-                    <span class="flex-grow-1"><?= d__('system', 'Forum') ?></span>
-                    <?php if ($forum_counters['new_messages'] > 0): ?>
-                        <span class="badge badge-pill badge-danger">+ <?= $tools->formatNumber($forum_counters['new_messages']) ?></span>
-                    <?php endif; ?>
-                </a>
-            </li>
-        <?php endif ?>
         <?php if ($config['mod_guest'] || $user->rights >= 7): ?>
             <li>
                 <a href="/guestbook/ga">
@@ -62,32 +31,6 @@ $ads_array = $ads->getAds();
                     <span class="flex-grow-1"><?= d__('system', 'Guestbook') ?></span>
                     <?php if ($guestbook_counters['guestbook'] > 0): ?>
                         <span class="badge badge-pill badge-danger">+ <?= $tools->formatNumber($guestbook_counters['guestbook']) ?></span>
-                    <?php endif ?>
-                </a>
-            </li>
-        <?php endif ?>
-        <?php if ($config['mod_down'] || $user->rights >= 7): ?>
-            <li>
-                <a href="/downloads/">
-                    <svg class="icon">
-                        <use xlink:href="<?= $this->asset('icons/sprite.svg') ?>#download"/>
-                    </svg>
-                    <span class="flex-grow-1"><?= d__('system', 'Downloads') ?></span>
-                    <?php if ($downloads_counters['new'] > 0): ?>
-                        <span class="badge badge-pill badge-danger">+ <?= $tools->formatNumber($downloads_counters['new']) ?></span>
-                    <?php endif ?>
-                </a>
-            </li>
-        <?php endif ?>
-        <?php if ($config['mod_lib'] || $user->rights >= 7): ?>
-            <li>
-                <a href="/library/">
-                    <svg class="icon">
-                        <use xlink:href="<?= $this->asset('icons/sprite.svg') ?>#text"/>
-                    </svg>
-                    <span class="flex-grow-1"><?= d__('system', 'Library') ?></span>
-                    <?php if ($library_counters['new'] > 0): ?>
-                        <span class="badge badge-pill badge-danger">+ <?= $tools->formatNumber($library_counters['new']) ?></span>
                     <?php endif ?>
                 </a>
             </li>
@@ -103,17 +46,25 @@ $ads_array = $ads->getAds();
                 <?php endif ?>
             </a>
         </li>
+        
         <li>
-            <a href="/album/">
-                <svg class="icon">
-                    <use xlink:href="<?= $this->asset('icons/sprite.svg') ?>#picasa"/>
+            <a href="/ads_akbarali/">
+               <svg class="icon">
+                    <use xlink:href="<?= $this->asset('icons/sprite.svg') ?>#users"/>
                 </svg>
-                <span class="flex-grow-1"><?= d__('system', 'Photo Albums') ?></span>
-                <?php if ($album_counters['new'] > 0): ?>
-                    <span class="badge badge-pill badge-danger">+ <?= $tools->formatNumber($album_counters['new']) ?></span>
-                <?php endif ?>
+                <span class="flex-grow-1">ADS Akbarali</span>
             </a>
         </li>
+        
+        <li>
+            <a href="/images/">
+               <svg class="icon">
+                    <use xlink:href="<?= $this->asset('icons/sprite.svg') ?>#users"/>
+                </svg>
+                <span class="flex-grow-1">IMG BBCODE</span>
+            </a>
+        </li>
+        
         <li>
             <a href="/help/">
                 <svg class="icon">

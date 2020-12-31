@@ -13,3 +13,4 @@ $map->addRoute(['GET', 'POST'], '/blog/[{category:[\w/+-]+}[/[{article:[\w.+-]+}
 //Ads bo`limi
 
 $map->addRoute(['GET', 'POST'], '/ads_akbarali/[{action}/]', 'modules/ads_akbarali/index.php');
+$map->addRoute(['GET', 'POST'], '/api_akbarali/[{action}/]', 'modules/api_akbarali/index.php');

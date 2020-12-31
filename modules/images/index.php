@@ -1,5 +1,13 @@
 <?php
-
+/*
+ * Akbarali yozgan 
+ * Sana: 30.10.2020
+ * Bog`lanish: Akbarali@uzhackersw.uz
+ * Sayt: UzHackerSW.uz
+ * Modifikatsiya: 03/11/2020
+ * Johncms Профил: https://johncms.com/profile/?user=38217
+ * На тему: https://johncms.com/forum/?type=topic&id=12200
+ */
 // Запрещаем прямой запрос к файлу модуля без подключенного ядра
 defined('_IN_JOHNCMS') || die('Error: restricted access');
 

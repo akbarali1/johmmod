@@ -11,9 +11,8 @@ html,body
 	overflow: hidden;
 }
 
-.table_gl
-{
-	background: #eaf0e6;
+.table_gl{
+	background: #F4F3EF;
 	border: 0;
 	margin: 0;
 	padding: 0;
@@ -22,8 +21,7 @@ html,body
     height: 80px;
 }
 
-.table
-{
+.table{
 	border: 0;
 	margin: 0;
 	padding: 0;

@@ -20,9 +20,10 @@ echo $data['pagination'];?>
             <a href="<?=$config['homeurl']?>/ads_akbarali/view/?id=<?= $ads['id']?>" class="post-title"><?= $ads['name']?></a>
             <div class="post-body"><?= $ads['description']?></div>
             <div class="text-muted small d-flex align-items-center flex-wrap">
-                <span class="pr-2"><span><?=__('author');?></span>
+             ID raqami: <?= $ads['id']?> | Beriladigan ball: <?= $ads['ball']?> |  &nbsp;
+                <span class="pr-2"><span><?= __('author');?></span>
                 <a href="<?=$config['homeurl']?>/profile/?user=<?= $ads['user_id']?>"><?= $ads['author']?></a>
-                (<?= $ads['time']?>),</span>
+                | <?= $ads['time']?>
             </div>
         </div>
     <?php endforeach; ?>

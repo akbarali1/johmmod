@@ -1,4 +1,13 @@
 <?php
+/*
+ * Akbarali yozgan 
+ * Sana: 30.10.2020
+ * Bog`lanish: Akbarali@uzhackersw.uz
+ * Sayt: UzHackerSW.uz
+ * Modifikatsiya: 03/11/2020
+ * Johncms Профил: https://johncms.com/profile/?user=38217
+ * На тему: https://johncms.com/forum/?type=topic&id=12200
+ */
 declare(strict_types = 1);
 use Johncms\FileInfo;
 use Johncms\System\Http\Request;

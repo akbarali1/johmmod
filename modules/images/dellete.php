@@ -1,6 +1,6 @@
 <?php
 /*
- * Akbarali yozgan 
+ * Akbarali yozgan
  * Sana: 30.10.2020
  * Bog`lanish: Akbarali@uzhackersw.uz
  * Sayt: UzHackerSW.uz
@@ -34,6 +34,7 @@ if (!$id) {
         exit();
     }
 }else{
+    $connect->table('images_akb')->where('id', $post)->delete();
  echo $jsonencode->jeerror('No dellete file');
   exit();
 }

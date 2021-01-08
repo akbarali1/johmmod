@@ -1,0 +1,72 @@
+<?php
+$this->layout('system::layout/default', [
+    'title' => $title,
+    'page_title' => $page_title ?? $title,
+]);
+?>
+
+
+<?= $this->fetch('chats::inc_alert', ['alert' => $alert ?? []]) ?>
+<?= $this->section('subheader') ?>
+
+
+
+<section class="msger">
+  <header class="msger-header">
+    <div class="msger-header-title">
+      <i class="fas fa-comment-alt"></i> SimpleChat
+    </div>
+    <div class="msger-header-options">
+      <span><i class="fas fa-cog"></i></span>
+    </div>
+  </header>
+
+<?php if ($user->isValid()): ?>
+    <?= $this->fetch('chats::ask', ['ask' => $ask ?? []]) ?>
+<?php else: ?>
+    <div>
+                <div class="card-body">
+                    Sorry you have to log in to join the chat
+                </div>
+        </div>
+<?php endif ?>
+
+  <main class="msger-chat">
+    <?php if (empty($questions)): ?>
+    <div class="alert alert-info" role="alert">
+        No Chats desk
+    </div>
+<?php else: ?>
+
+    <?php foreach ($questions as $question): ?>
+    <div class="msg left-msg">
+      <div
+       class="msg-img"
+       style="background-image: url(<?= $this->avatar($question['author_id']) ?>)"
+      ></div>
+
+      <div class="msg-bubble">
+        <div class="msg-info">
+          <div class="msg-info-name"><a href="/profile/?user=<?= $question['author_id'] ?>" class="user-login mr-2"><?= $this->e($question['author_name'] ?? 'Гость') ?></a></div>
+        </div>
+
+        <div class="msg-text">
+          <?= $this->bbcode($question['text']) ?>
+        </div>
+      </div>
+    <div style="clear:both"></div>
+    </div>
+<?php endforeach ?>
+<?php endif ?>
+  </main>
+
+<?php if ($questionsCount > $limit): ?>
+    <div class="mt-1" style="margin-left: 17px!important;margin-top: 17px !important;"> 
+        <?= $tools->displayPagination("/chats/$pagenavUrl", $start, $questionsCount, $limit) ?>
+    </div>
+<?php endif ?>
+</section>
+
+<?php $this->push('styles') ?>
+<link rel="stylesheet" href="<?= $this->asset('chats/chat.css', true) ?>">
+<?php $this->stop(); ?>

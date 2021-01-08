@@ -14,13 +14,6 @@ return [
     'forum' => [
         'settings'      => [
             'file_counters' => false,
-
-            'topic_keywords'      => '',
-            'topic_description'   => '',
-            'section_keywords'    => '',
-            'section_description' => '',
-            'forum_keywords'      => '',
-            'forum_description'   => '',
         ],
         'extensions'    => [
             // Архивы

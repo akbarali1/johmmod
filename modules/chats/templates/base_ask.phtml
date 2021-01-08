@@ -1,0 +1,25 @@
+<div align="center">
+    <div>
+        <?= $this->fetch('system::app/alert', [
+                'alert_type' => 'alert-danger',
+                'alert' => $errors
+        ]) ?>
+
+        <div class="chat-user-holder">
+            <?= $this->section('chats_header') ?>
+                <div class="card-body">
+                    <table width="100%">
+                        <td width="auto">
+                            <input type="text" class="form-control" name="title" id="name" maxlength="150" value="<?= $this->e($question['title'] ?? '') ?> Chats saja"  style="display:none" required>
+                            <div><?= $this->bbpanel('chats', 'text') ?></div>
+                            <textarea class="form-control" rows="<?= $user->config->fieldHeight ?>" name="text" id="text" required><?= $this->e($question['text'] ?? '') ?></textarea>
+                        </td>
+                        <td width="15%" valign="top" style="padding-left: 10px;">
+                            <input type="submit" name="submit" value="Send" class="btn btn-primary sendMessage" style="width: 100%;">
+                        </td>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

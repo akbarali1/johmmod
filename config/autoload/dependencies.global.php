@@ -17,7 +17,6 @@ use Johncms\ImageManagerFactory;
 use Johncms\Mail\MailFactory;
 use Johncms\NavChain;
 use Johncms\Security\Csrf;
-use Johncms\Security\HTMLPurifier;
 use Johncms\System\Legacy\Bbcode;
 use Johncms\System\Legacy\Tools;
 
@@ -32,7 +31,6 @@ return [
             Csrf::class         => Csrf::class,
             'counters'          => Johncms\CountersFactory::class,
             MailFactory::class  => MailFactory::class,
-            HTMLPurifier::class => HTMLPurifier::class,
         ],
     ],
 ];

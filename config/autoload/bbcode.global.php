@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 return [
     'bbcode' => [
-        //image || Rasm
+     //image || Rasm
         'img'       => [
             'from' => '#\[img](.+?)\[/img]#is',
             'to'   => '<img class="" src="../upload/images_akb/$1" alt="*" style=" max-width: 100%; ">',

@@ -1,0 +1,20 @@
+<?php
+$this->layout('chats::base_ask', [
+    'title' => $title,
+    'page_title' => $title,
+    'question' => $question,
+    'errors' => $errors,
+    'backlink' => '/chats/',
+]);
+?>
+
+<?php $this->start('chats_header') ?>
+    <form name="chats" action="/chats/ask/" method="post" enctype="multipart/form-data">
+<?php $this->stop() ?>
+
+<?php $this->start('chats_attachment') ?>
+    <div class="custom-file mt-3">
+        <input type="file" class="custom-file-input" id="file" name="file">
+        <label class="custom-file-label" for="file">Attach file</label>
+    </div>
+<?php $this->stop() ?>

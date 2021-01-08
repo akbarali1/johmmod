@@ -1,0 +1,9 @@
+<?php $rightsName = $this->rightsName($rights); ?>
+<?php if ($rightsName): ?>
+    <div class="post-of-user" data-toggle="tooltip" data-placement="top"
+         title="<?= $rightsName ?>">
+        <svg class="icon-post">
+            <use xlink:href="<?= $this->asset('icons/sprite.svg') ?>?4#check"/>
+        </svg>
+    </div>
+<?php endif ?>

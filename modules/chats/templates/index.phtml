@@ -1,0 +1,15 @@
+<?php
+$this->layout('chats::base_index', [
+    'title' => 'Chats',
+    'questions' => $questions,
+    'questionsCount' => $questionsCount,
+    'pagenavUrl' => $pagenavUrl,
+    'start' => $start,
+    'limit' => $limit,
+]);
+?>
+
+<?php $this->start('subheader') ?>
+
+<?= $this->fetch('chats::inc_alert', ['alert' => $alert ?? []]) ?>
+<?php $this->stop() ?>

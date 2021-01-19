@@ -32,11 +32,13 @@ switch ($act) {
     case 'adsview':
        require 'includes/adsview.php';
        break;
-   
+
     case 'adscheck':
        require 'includes/adscheck.php';
        break;
-       
+
+   case 'delletechats':
+   require 'includes/delletechats.php';
     default:
         require 'includes/index.php';
         break;
